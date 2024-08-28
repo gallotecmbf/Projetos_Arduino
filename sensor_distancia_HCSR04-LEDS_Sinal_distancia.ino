@@ -1,3 +1,5 @@
+//BASEADO NOS EXEMPLOS DE ARDUINO.CC https://www.arduino.cc/reference/en/libraries/hcsr04-ultrasonic-sensor/
+
 /* Antes das funções de configuração (void setup) e de rotina
 (void loop) é possível dar nomes para as portas do arduino
 com o intuíto de facilitar a programação, deixando elas mais
