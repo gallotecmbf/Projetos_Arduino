@@ -52,11 +52,19 @@ void loop()
   //com nome de duração para receber o sinal enviado pelo trig
   long duracao = pulseIn(echo, HIGH);
   
-  //Cria uma variável estilo inteira (apenas números inteiros - sem
-  //casas decimais convertendo o valor da duração como um valor
-  //de medida de distância, por esta razão o valor da variável 
-  //duracao deve ser dividido por 2. O valor 29.1 é utilizado para 
-  //padronizar a unidade de medida em centímetros.
+  /*Cria uma variável estilo inteira (apenas números 
+  inteiros - sem casas decimais convertendo o valor da duração como um valor
+  de medida de distância, por esta razão o valor da variável 
+  duracao deve ser dividido por 2. 
+  Como a velocidade do som no ar à 20ºC é de aproximadamente
+  340 m/s, temos que a distância é calculada como
+  distância = (velocidade do som no ar)*(tempo de propagação)
+  Com isto em mente, devemos utilizar a padronização para o
+  resultado em centímetros dividindo-se o valor do 
+  tempo dividido por 2 (uma vez que o som emitido foi e voltou)
+  sendo este resultado multiplicado por 0,0343 ou divindo 
+  por 29.1 (que é o resultado de 1 divido por 0,0343)
+  padronizando a unidade medida em um valor em centímetros.*/
   int distancia = (duracao/2)/29.1;
   
   
